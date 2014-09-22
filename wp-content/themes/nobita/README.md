@@ -1,18 +1,14 @@
-# [Roots Starter Theme](http://roots.io/)
-[![devDependency Status](https://david-dm.org/roots/roots/dev-status.svg)](https://david-dm.org/roots/roots#info=devDependencies)
+loki
+====
 
-Roots is a WordPress starter theme based on [HTML5 Boilerplate](http://html5boilerplate.com/) & [Bootstrap](http://getbootstrap.com/) that will help you make better themes.
+a WordPress starter theme , a Fork of Roots
 
-* Source: [https://github.com/roots/roots](https://github.com/roots/roots)
-* Homepage: [http://roots.io/](http://roots.io/)
-* Documentation: [http://roots.io/docs/](http://roots.io/docs/)
-* Twitter: [@rootswp](https://twitter.com/rootswp), [@retlehs](https://twitter.com/retlehs), [@swalkinshaw](https://twitter.com/swalkinshaw), [@Foxaii](https://twitter.com/Foxaii), [@c2foryou](https://twitter.com/c2foryou)
-* Newsletter: [Subscribe](http://roots.io/subscribe/)
-* Forum: [http://discourse.roots.io/](http://discourse.roots.io/)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ## Features
 
-* [Grunt](http://roots.io/using-grunt-for-wordpress-theme-development/) for compiling LESS to CSS, checking for JS errors, live reloading, concatenating and minifying files, versioning assets, and generating lean Modernizr builds
+* [Grunt](http://roots.io/using-grunt-for-wordpress-theme-development/) for compiling SASS to CSS, checking for JS errors, live reloading, concatenating and minifying files, versioning assets, and generating lean Modernizr builds
 * [Bower](http://bower.io/) for front-end package management
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
   * The latest [jQuery](http://jquery.com/) via Google CDN, with a local fallback
@@ -57,7 +53,7 @@ Edit `lib/init.php` to setup navigation menus, post thumbnail sizes, post format
 
 ## Theme development
 
-Roots uses [Grunt](http://gruntjs.com/) for compiling LESS to CSS, checking for JS errors, live reloading, concatenating and minifying files, versioning assets, and generating lean Modernizr builds.
+Roots uses [Grunt](http://gruntjs.com/) for compiling SASS to CSS, checking for JS errors, live reloading, concatenating and minifying files, versioning assets, and generating lean Modernizr builds.
 
 If you'd like to use Bootstrap Sass, look at the [Roots Sass](https://github.com/roots/roots-sass) fork.
 
@@ -79,27 +75,6 @@ We also advise against running as root user. NPM deliberately uses limited privi
 
 ### Available Grunt commands
 
-* `grunt dev` — Compile LESS to CSS, concatenate and validate JS
+* `grunt dev` — Compile SASSles to CSS, concatenate and validate JS
 * `grunt watch` — Compile assets when file changes are made
 * `grunt build` — Create minified assets that are used on non-development environments
-
-## Documentation
-
-* [Roots 101](http://roots.io/roots-101/) — A guide to installing Roots, the files, and theme organization
-* [Theme Wrapper](http://roots.io/an-introduction-to-the-roots-theme-wrapper/) — Learn all about the theme wrapper
-* [Build Script](http://roots.io/using-grunt-for-wordpress-theme-development/) — A look into how Roots uses Grunt
-* [Roots Sidebar](http://roots.io/the-roots-sidebar/) — Understand how to display or hide the sidebar in Roots
-
-## Contributing
-
-Everyone is welcome to help [contribute](CONTRIBUTING.md) and improve this project. There are several ways you can contribute:
-
-* Reporting issues (please read [issue guidelines](https://github.com/necolas/issue-guidelines))
-* Suggesting new features
-* Writing or refactoring code
-* Fixing [issues](https://github.com/roots/roots/issues)
-* Replying to questions on the [forum](http://discourse.roots.io/)
-
-## Support
-
-Use the [Roots Discourse](http://discourse.roots.io/) to ask questions and get support.

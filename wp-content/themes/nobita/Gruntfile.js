@@ -34,30 +34,18 @@ module.exports = function(grunt) {
         '!assets/**/*.min.*'
       ]
     },
-    less: {
-      dev: {
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded',
+          compass: true,
+          // Source maps are available, but require Sass 3.3.0 to be installed
+          // https://github.com/gruntjs/grunt-contrib-sass#sourcemap
+        },
         files: {
           'assets/css/main.css': [
-            'assets/less/main.less'
+            'assets/sass/main.scss'
           ]
-        },
-        options: {
-          compress: false,
-          // LESS source map
-          // To enable, set sourceMap to true and update sourceMapRootpath based on your install
-          sourceMap: true,
-          sourceMapFilename: 'assets/css/main.css.map',
-          sourceMapRootpath: '/app/themes/roots/'
-        }
-      },
-      build: {
-        files: {
-          'assets/css/main.min.css': [
-            'assets/less/main.less'
-          ]
-        },
-        options: {
-          compress: true
         }
       }
     },
@@ -124,12 +112,12 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      less: {
+      sass: {
         files: [
-          'assets/less/*.less',
-          'assets/less/**/*.less'
+          'assets/sass/*.scss',
+          'assets/sass/bootstrap/*.scss'
         ],
-        tasks: ['less:dev', 'autoprefixer:dev']
+        tasks: ['sass', 'version']
       },
       js: {
         files: [
@@ -160,13 +148,14 @@ module.exports = function(grunt) {
   ]);
   grunt.registerTask('dev', [
     'jshint',
-    'less:dev',
+    'sass',
     'autoprefixer:dev',
-    'concat'
+    'concat',
+     'watch'
   ]);
   grunt.registerTask('build', [
     'jshint',
-    'less:build',
+    'sass',
     'autoprefixer:build',
     'uglify',
     'modernizr',
